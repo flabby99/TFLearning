@@ -1,0 +1,1 @@
+from gym_inviwo.envs.inviwo_env import InviwoEnv

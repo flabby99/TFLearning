@@ -1,0 +1,1 @@
+# An environment which renders frames through volume rendering in Inviwo
