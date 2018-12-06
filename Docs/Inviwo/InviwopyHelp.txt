@@ -1,0 +1,5303 @@
+Help on module inviwopy:
+
+NAME
+    inviwopy - Python interface for Inviwo
+
+SUBMODULES
+    data
+    glm
+    properties
+    qt
+
+CLASSES
+    inviwopy.properties.PropertyOwner(pybind11_builtins.pybind11_object)
+        Processor
+            CanvasProcessor
+            PythonScriptProcessor
+        Settings
+    pybind11_builtins.pybind11_object(builtins.object)
+        CodeState
+        InportVectorWrapper
+        InviwoApplication
+        InviwoModule
+        ModulePath
+        ModuleVectorWrapper
+        OutportVectorWrapper
+        PathType
+        Port
+            Inport
+                Size2tFlatMultiInport
+                Size2tInport
+                Size2tMultiInport
+                Size3tFlatMultiInport
+                Size3tInport
+                Size3tMultiInport
+                Size4tFlatMultiInport
+                Size4tInport
+                Size4tMultiInport
+                Vec2FlatMultiInport
+                Vec2Inport
+                Vec2MultiInport
+                Vec3FlatMultiInport
+                Vec3Inport
+                Vec3MultiInport
+                Vec4FlatMultiInport
+                Vec4Inport
+                Vec4MultiInport
+                dVec2FlatMultiInport
+                dVec2Inport
+                dVec2MultiInport
+                dVec3FlatMultiInport
+                dVec3Inport
+                dVec3MultiInport
+                dVec4FlatMultiInport
+                dVec4Inport
+                dVec4MultiInport
+                iVec2FlatMultiInport
+                iVec2Inport
+                iVec2MultiInport
+                iVec3FlatMultiInport
+                iVec3Inport
+                iVec3MultiInport
+                iVec4FlatMultiInport
+                iVec4Inport
+                iVec4MultiInport
+            Outport
+                Size2tOutport
+                Size3tOutport
+                Size4tOutport
+                Vec2Outport
+                Vec3Outport
+                Vec4Outport
+                dVec2Outport
+                dVec3Outport
+                dVec4Outport
+                iVec2Outport
+                iVec3Outport
+                iVec4Outport
+        PortConnection
+        ProcessorFactory
+        ProcessorInfo
+        ProcessorMetaData
+        ProcessorNetwork
+        ProcessorWidget
+        PropertyLink
+        Tag
+        Tags
+    
+    class CanvasProcessor(Processor)
+     |  Method resolution order:
+     |      CanvasProcessor
+     |      Processor
+     |      inviwopy.properties.PropertyOwner
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  getUseCustomDimensions(...)
+     |      getUseCustomDimensions(self: inviwopy.CanvasProcessor) -> bool
+     |  
+     |  snapshot(...)
+     |      snapshot(self: inviwopy.CanvasProcessor, arg0: str) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |  
+     |  customDimensions
+     |  
+     |  fullScreen
+     |  
+     |  image
+     |  
+     |  ready
+     |  
+     |  size
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Processor:
+     |  
+     |  addInport(...)
+     |      addInport(self: inviwopy.Processor, inport: inviwopy.Inport, group: str='default') -> None
+     |  
+     |  addOutport(...)
+     |      addOutport(self: inviwopy.Processor, outport: inviwopy.Outport, group: str='default') -> None
+     |  
+     |  getInport(...)
+     |      getInport(self: inviwopy.Processor, arg0: str) -> inviwopy.Inport
+     |  
+     |  getOutport(...)
+     |      getOutport(self: inviwopy.Processor, arg0: str) -> inviwopy.Outport
+     |  
+     |  getPort(...)
+     |      getPort(self: inviwopy.Processor, arg0: str) -> inviwopy.Port
+     |  
+     |  getProcessorInfo(...)
+     |      getProcessorInfo(self: inviwopy.Processor) -> inviwopy.ProcessorInfo
+     |  
+     |  hasProcessorWidget(...)
+     |      hasProcessorWidget(self: inviwopy.Processor) -> bool
+     |  
+     |  initializeResources(...)
+     |      initializeResources(self: inviwopy.Processor) -> None
+     |  
+     |  process(...)
+     |      process(self: inviwopy.Processor) -> None
+     |  
+     |  removeInport(...)
+     |      removeInport(self: inviwopy.Processor, arg0: inviwopy.Inport) -> inviwopy.Inport
+     |  
+     |  removeOutport(...)
+     |      removeOutport(self: inviwopy.Processor, arg0: inviwopy.Outport) -> inviwopy.Outport
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Processor:
+     |  
+     |  category
+     |  
+     |  classIdentifier
+     |  
+     |  codeState
+     |  
+     |  displayName
+     |  
+     |  identifier
+     |  
+     |  inports
+     |  
+     |  meta
+     |  
+     |  network
+     |  
+     |  outports
+     |  
+     |  tags
+     |  
+     |  widget
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.properties.PropertyOwner, arg0: str) -> inviwo::Property
+     |  
+     |  addProperty(...)
+     |      addProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> None
+     |  
+     |  getInvalidationLevel(...)
+     |      getInvalidationLevel(self: inviwopy.properties.PropertyOwner) -> inviwo::InvalidationLevel
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.properties.PropertyOwner) -> List[str]
+     |  
+     |  getPropertiesRecursive(...)
+     |      getPropertiesRecursive(self: inviwopy.properties.PropertyOwner) -> List[inviwo::Property]
+     |  
+     |  getPropertyByIdentifier(...)
+     |      getPropertyByIdentifier(self: inviwopy.properties.PropertyOwner, identifier: str, recursiveSearch: bool=False) -> inviwo::Property
+     |  
+     |  getPropertyByPath(...)
+     |      getPropertyByPath(self: inviwopy.properties.PropertyOwner, arg0: List[str]) -> inviwo::Property
+     |  
+     |  invalidate(...)
+     |      invalidate(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  removeProperty(...)
+     |      removeProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> inviwo::Property
+     |  
+     |  resetAllPoperties(...)
+     |      resetAllPoperties(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setAllPropertiesCurrentStateAsDefault(...)
+     |      setAllPropertiesCurrentStateAsDefault(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setValid(...)
+     |      setValid(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  processor
+     |  
+     |  properties
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class CodeState(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      CodeState
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(...)
+     |      __eq__(self: inviwopy.CodeState, arg0: inviwopy.CodeState) -> bool
+     |  
+     |  __getstate__(...)
+     |      __getstate__(self: inviwopy.CodeState) -> tuple
+     |  
+     |  __hash__(...)
+     |      __hash__(self: inviwopy.CodeState) -> int
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.CodeState, arg0: int) -> None
+     |  
+     |  __int__(...)
+     |      __int__(self: inviwopy.CodeState) -> int
+     |  
+     |  __ne__(...)
+     |      __ne__(self: inviwopy.CodeState, arg0: inviwopy.CodeState) -> bool
+     |  
+     |  __repr__(...)
+     |      __repr__(self: inviwopy.CodeState) -> str
+     |  
+     |  __setstate__(...)
+     |      __setstate__(self: inviwopy.CodeState, arg0: tuple) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __members__
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  Broken = CodeState.Broken
+     |  
+     |  Experimental = CodeState.Experimental
+     |  
+     |  Stable = CodeState.Stable
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Inport(Port)
+     |  Method resolution order:
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class InportVectorWrapper(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      InportVectorWrapper
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __contains__(...)
+     |      __contains__(self: inviwopy.InportVectorWrapper, arg0: str) -> bool
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.InportVectorWrapper, arg0: str) -> inviwopy.Inport
+     |  
+     |  __getitem__(...)
+     |      __getitem__(self: inviwopy.InportVectorWrapper, arg0: int) -> inviwopy.Inport
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __len__(...)
+     |      __len__(self: inviwopy.InportVectorWrapper) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class InviwoApplication(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      InviwoApplication
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  closeInviwoApplication(...)
+     |      closeInviwoApplication(self: inviwopy.InviwoApplication) -> None
+     |  
+     |  getModuleByIdentifier(...)
+     |      getModuleByIdentifier(self: inviwopy.InviwoApplication, arg0: str) -> inviwo::InviwoModule
+     |  
+     |  getModuleSettings(...)
+     |      getModuleSettings(self: inviwopy.InviwoApplication) -> std::vector<inviwo::Settings*, std::allocator<inviwo::Settings*> >
+     |  
+     |  getOutputPath(...)
+     |      getOutputPath(self: inviwopy.InviwoApplication) -> str
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.InviwoApplication, pathType: inviwopy.PathType, suffix: str='', createFolder: bool=False) -> str
+     |  
+     |  waitForPool(...)
+     |      waitForPool(self: inviwopy.InviwoApplication) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  basePath
+     |  
+     |  displayName
+     |  
+     |  modules
+     |  
+     |  network
+     |  
+     |  processorFactory
+     |  
+     |  propertyFactory
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class InviwoModule(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      InviwoModule
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.InviwoModule, arg0: inviwopy.ModulePath) -> str
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  description
+     |  
+     |  identifier
+     |  
+     |  path
+     |  
+     |  version
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ModulePath(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ModulePath
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(...)
+     |      __eq__(self: inviwopy.ModulePath, arg0: inviwopy.ModulePath) -> bool
+     |  
+     |  __getstate__(...)
+     |      __getstate__(self: inviwopy.ModulePath) -> tuple
+     |  
+     |  __hash__(...)
+     |      __hash__(self: inviwopy.ModulePath) -> int
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.ModulePath, arg0: int) -> None
+     |  
+     |  __int__(...)
+     |      __int__(self: inviwopy.ModulePath) -> int
+     |  
+     |  __ne__(...)
+     |      __ne__(self: inviwopy.ModulePath, arg0: inviwopy.ModulePath) -> bool
+     |  
+     |  __repr__(...)
+     |      __repr__(self: inviwopy.ModulePath) -> str
+     |  
+     |  __setstate__(...)
+     |      __setstate__(self: inviwopy.ModulePath, arg0: tuple) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __members__
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  CL = ModulePath.CL
+     |  
+     |  Data = ModulePath.Data
+     |  
+     |  GLSL = ModulePath.GLSL
+     |  
+     |  Images = ModulePath.Images
+     |  
+     |  PortInspectors = ModulePath.PortInspectors
+     |  
+     |  RegressionTests = ModulePath.RegressionTests
+     |  
+     |  Scripts = ModulePath.Scripts
+     |  
+     |  TestImages = ModulePath.TestImages
+     |  
+     |  TestVolumes = ModulePath.TestVolumes
+     |  
+     |  Tests = ModulePath.Tests
+     |  
+     |  UnitTests = ModulePath.UnitTests
+     |  
+     |  Volumes = ModulePath.Volumes
+     |  
+     |  Workspaces = ModulePath.Workspaces
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ModuleVectorWrapper(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ModuleVectorWrapper
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __contains__(...)
+     |      __contains__(self: inviwopy.ModuleVectorWrapper, arg0: str) -> bool
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.ModuleVectorWrapper, arg0: str) -> inviwo::InviwoModule
+     |  
+     |  __getitem__(...)
+     |      __getitem__(self: inviwopy.ModuleVectorWrapper, arg0: int) -> inviwo::InviwoModule
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __len__(...)
+     |      __len__(self: inviwopy.ModuleVectorWrapper) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Outport(Port)
+     |  Method resolution order:
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class OutportVectorWrapper(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      OutportVectorWrapper
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __contains__(...)
+     |      __contains__(self: inviwopy.OutportVectorWrapper, arg0: str) -> bool
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.OutportVectorWrapper, arg0: str) -> inviwopy.Outport
+     |  
+     |  __getitem__(...)
+     |      __getitem__(self: inviwopy.OutportVectorWrapper, arg0: int) -> inviwopy.Outport
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __len__(...)
+     |      __len__(self: inviwopy.OutportVectorWrapper) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class PathType(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      PathType
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(...)
+     |      __eq__(self: inviwopy.PathType, arg0: inviwopy.PathType) -> bool
+     |  
+     |  __getstate__(...)
+     |      __getstate__(self: inviwopy.PathType) -> tuple
+     |  
+     |  __hash__(...)
+     |      __hash__(self: inviwopy.PathType) -> int
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.PathType, arg0: int) -> None
+     |  
+     |  __int__(...)
+     |      __int__(self: inviwopy.PathType) -> int
+     |  
+     |  __ne__(...)
+     |      __ne__(self: inviwopy.PathType, arg0: inviwopy.PathType) -> bool
+     |  
+     |  __repr__(...)
+     |      __repr__(self: inviwopy.PathType) -> str
+     |  
+     |  __setstate__(...)
+     |      __setstate__(self: inviwopy.PathType, arg0: tuple) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __members__
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  Data = PathType.Data
+     |  
+     |  Databases = PathType.Databases
+     |  
+     |  Help = PathType.Help
+     |  
+     |  Images = PathType.Images
+     |  
+     |  PortInspectors = PathType.PortInspectors
+     |  
+     |  Resources = PathType.Resources
+     |  
+     |  Scripts = PathType.Scripts
+     |  
+     |  Settings = PathType.Settings
+     |  
+     |  Tests = PathType.Tests
+     |  
+     |  TransferFunctions = PathType.TransferFunctions
+     |  
+     |  Volumes = PathType.Volumes
+     |  
+     |  Workspaces = PathType.Workspaces
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Port(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class PortConnection(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      PortConnection
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.PortConnection, arg0: inviwopy.Outport, arg1: inviwopy.Inport) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  inport
+     |  
+     |  outport
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Processor(inviwopy.properties.PropertyOwner)
+     |  Method resolution order:
+     |      Processor
+     |      inviwopy.properties.PropertyOwner
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Processor, arg0: str, arg1: str) -> None
+     |  
+     |  addInport(...)
+     |      addInport(self: inviwopy.Processor, inport: inviwopy.Inport, group: str='default') -> None
+     |  
+     |  addOutport(...)
+     |      addOutport(self: inviwopy.Processor, outport: inviwopy.Outport, group: str='default') -> None
+     |  
+     |  getInport(...)
+     |      getInport(self: inviwopy.Processor, arg0: str) -> inviwopy.Inport
+     |  
+     |  getOutport(...)
+     |      getOutport(self: inviwopy.Processor, arg0: str) -> inviwopy.Outport
+     |  
+     |  getPort(...)
+     |      getPort(self: inviwopy.Processor, arg0: str) -> inviwopy.Port
+     |  
+     |  getProcessorInfo(...)
+     |      getProcessorInfo(self: inviwopy.Processor) -> inviwopy.ProcessorInfo
+     |  
+     |  hasProcessorWidget(...)
+     |      hasProcessorWidget(self: inviwopy.Processor) -> bool
+     |  
+     |  initializeResources(...)
+     |      initializeResources(self: inviwopy.Processor) -> None
+     |  
+     |  process(...)
+     |      process(self: inviwopy.Processor) -> None
+     |  
+     |  removeInport(...)
+     |      removeInport(self: inviwopy.Processor, arg0: inviwopy.Inport) -> inviwopy.Inport
+     |  
+     |  removeOutport(...)
+     |      removeOutport(self: inviwopy.Processor, arg0: inviwopy.Outport) -> inviwopy.Outport
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |  
+     |  category
+     |  
+     |  classIdentifier
+     |  
+     |  codeState
+     |  
+     |  displayName
+     |  
+     |  identifier
+     |  
+     |  inports
+     |  
+     |  meta
+     |  
+     |  network
+     |  
+     |  outports
+     |  
+     |  tags
+     |  
+     |  widget
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.properties.PropertyOwner, arg0: str) -> inviwo::Property
+     |  
+     |  addProperty(...)
+     |      addProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> None
+     |  
+     |  getInvalidationLevel(...)
+     |      getInvalidationLevel(self: inviwopy.properties.PropertyOwner) -> inviwo::InvalidationLevel
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.properties.PropertyOwner) -> List[str]
+     |  
+     |  getPropertiesRecursive(...)
+     |      getPropertiesRecursive(self: inviwopy.properties.PropertyOwner) -> List[inviwo::Property]
+     |  
+     |  getPropertyByIdentifier(...)
+     |      getPropertyByIdentifier(self: inviwopy.properties.PropertyOwner, identifier: str, recursiveSearch: bool=False) -> inviwo::Property
+     |  
+     |  getPropertyByPath(...)
+     |      getPropertyByPath(self: inviwopy.properties.PropertyOwner, arg0: List[str]) -> inviwo::Property
+     |  
+     |  invalidate(...)
+     |      invalidate(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  removeProperty(...)
+     |      removeProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> inviwo::Property
+     |  
+     |  resetAllPoperties(...)
+     |      resetAllPoperties(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setAllPropertiesCurrentStateAsDefault(...)
+     |      setAllPropertiesCurrentStateAsDefault(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setValid(...)
+     |      setValid(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  size(...)
+     |      size(self: inviwopy.properties.PropertyOwner) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  processor
+     |  
+     |  properties
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ProcessorFactory(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ProcessorFactory
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  create(...)
+     |      create(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. create(self: inviwopy.ProcessorFactory, arg0: str) -> inviwo::Processor
+     |      
+     |      2. create(self: inviwopy.ProcessorFactory, arg0: str, arg1: inviwopy.glm.ivec2) -> inviwo::Processor
+     |  
+     |  hasKey(...)
+     |      hasKey(self: inviwopy.ProcessorFactory, arg0: str) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  keys
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ProcessorInfo(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ProcessorInfo
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.ProcessorInfo, arg0: str, arg1: str, arg2: str, arg3: inviwopy.CodeState, arg4: inviwopy.Tags, arg5: bool) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  category
+     |  
+     |  classIdentifier
+     |  
+     |  codeState
+     |  
+     |  displayName
+     |  
+     |  tags
+     |  
+     |  visible
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ProcessorMetaData(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ProcessorMetaData
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  position
+     |  
+     |  selected
+     |  
+     |  visible
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ProcessorNetwork(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ProcessorNetwork
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.ProcessorNetwork, arg0: str) -> object
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  addConnection(...)
+     |      addConnection(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. addConnection(self: inviwopy.ProcessorNetwork, sourcePort: inviwopy.Outport, destPort: inviwopy.Inport) -> None
+     |      
+     |      2. addConnection(self: inviwopy.ProcessorNetwork, arg0: inviwopy.PortConnection) -> None
+     |  
+     |  addLink(...)
+     |      addLink(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. addLink(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property, arg1: inviwopy.properties.Property) -> None
+     |      
+     |      2. addLink(self: inviwopy.ProcessorNetwork, arg0: inviwopy.PropertyLink) -> None
+     |  
+     |  addProcessor(...)
+     |      addProcessor(self: inviwopy.ProcessorNetwork, arg0: inviwopy.Processor) -> None
+     |  
+     |  clear(...)
+     |      clear(self: inviwopy.ProcessorNetwork) -> None
+     |  
+     |  getLinksBetweenProcessors(...)
+     |      getLinksBetweenProcessors(self: inviwopy.ProcessorNetwork, arg0: inviwopy.Processor, arg1: inviwopy.Processor) -> List[inviwopy.PropertyLink]
+     |  
+     |  getProcessorByIdentifier(...)
+     |      getProcessorByIdentifier(self: inviwopy.ProcessorNetwork, arg0: str) -> inviwopy.Processor
+     |  
+     |  getPropertiesLinkedTo(...)
+     |      getPropertiesLinkedTo(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property) -> List[inviwopy.properties.Property]
+     |  
+     |  getProperty(...)
+     |      getProperty(self: inviwopy.ProcessorNetwork, arg0: List[str]) -> inviwopy.properties.Property
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.ProcessorNetwork, sourcePort: inviwopy.Outport, destPort: inviwopy.Inport) -> None
+     |  
+     |  isLinked(...)
+     |      isLinked(self: inviwopy.ProcessorNetwork, arg0: inviwopy.PropertyLink) -> None
+     |  
+     |  isLinkedBidirectional(...)
+     |      isLinkedBidirectional(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property, arg1: inviwopy.properties.Property) -> bool
+     |  
+     |  isPortInNetwork(...)
+     |      isPortInNetwork(self: inviwopy.ProcessorNetwork, arg0: inviwopy.Port) -> bool
+     |  
+     |  isPropertyInNetwork(...)
+     |      isPropertyInNetwork(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property) -> bool
+     |  
+     |  load(...)
+     |      load(self: inviwopy.ProcessorNetwork, arg0: str) -> None
+     |  
+     |  lock(...)
+     |      lock(self: inviwopy.ProcessorNetwork) -> None
+     |  
+     |  removeConnection(...)
+     |      removeConnection(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. removeConnection(self: inviwopy.ProcessorNetwork, sourcePort: inviwopy.Outport, destPort: inviwopy.Inport) -> None
+     |      
+     |      2. removeConnection(self: inviwopy.ProcessorNetwork, arg0: inviwopy.PortConnection) -> None
+     |  
+     |  removeLink(...)
+     |      removeLink(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. removeLink(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property, arg1: inviwopy.properties.Property) -> None
+     |      
+     |      2. removeLink(self: inviwopy.ProcessorNetwork, arg0: inviwopy.properties.Property, arg1: inviwopy.properties.Property) -> None
+     |  
+     |  removeProcessor(...)
+     |      removeProcessor(self: inviwopy.ProcessorNetwork, arg0: inviwopy.Processor) -> None
+     |  
+     |  save(...)
+     |      save(self: inviwopy.ProcessorNetwork, arg0: str) -> None
+     |  
+     |  unlock(...)
+     |      unlock(self: inviwopy.ProcessorNetwork) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  canvases
+     |  
+     |  connections
+     |  
+     |  deserializing
+     |  
+     |  empty
+     |  
+     |  invalidating
+     |  
+     |  linking
+     |  
+     |  links
+     |  
+     |  locked
+     |  
+     |  processors
+     |  
+     |  version
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class ProcessorWidget(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      ProcessorWidget
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  hide(...)
+     |      hide(self: inviwopy.ProcessorWidget) -> None
+     |  
+     |  show(...)
+     |      show(self: inviwopy.ProcessorWidget) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  dimensions
+     |  
+     |  position
+     |  
+     |  visibility
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class PropertyLink(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      PropertyLink
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.PropertyLink, src: inviwopy.properties.Property, dst: inviwopy.properties.Property) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  destination
+     |  
+     |  source
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class PythonScriptProcessor(Processor)
+     |  Method resolution order:
+     |      PythonScriptProcessor
+     |      Processor
+     |      inviwopy.properties.PropertyOwner
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  setInitializeResources(...)
+     |      setInitializeResources(self: inviwopy.PythonScriptProcessor, arg0: function) -> None
+     |  
+     |  setProcess(...)
+     |      setProcess(self: inviwopy.PythonScriptProcessor, arg0: function) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Processor:
+     |  
+     |  addInport(...)
+     |      addInport(self: inviwopy.Processor, inport: inviwopy.Inport, group: str='default') -> None
+     |  
+     |  addOutport(...)
+     |      addOutport(self: inviwopy.Processor, outport: inviwopy.Outport, group: str='default') -> None
+     |  
+     |  getInport(...)
+     |      getInport(self: inviwopy.Processor, arg0: str) -> inviwopy.Inport
+     |  
+     |  getOutport(...)
+     |      getOutport(self: inviwopy.Processor, arg0: str) -> inviwopy.Outport
+     |  
+     |  getPort(...)
+     |      getPort(self: inviwopy.Processor, arg0: str) -> inviwopy.Port
+     |  
+     |  getProcessorInfo(...)
+     |      getProcessorInfo(self: inviwopy.Processor) -> inviwopy.ProcessorInfo
+     |  
+     |  hasProcessorWidget(...)
+     |      hasProcessorWidget(self: inviwopy.Processor) -> bool
+     |  
+     |  initializeResources(...)
+     |      initializeResources(self: inviwopy.Processor) -> None
+     |  
+     |  process(...)
+     |      process(self: inviwopy.Processor) -> None
+     |  
+     |  removeInport(...)
+     |      removeInport(self: inviwopy.Processor, arg0: inviwopy.Inport) -> inviwopy.Inport
+     |  
+     |  removeOutport(...)
+     |      removeOutport(self: inviwopy.Processor, arg0: inviwopy.Outport) -> inviwopy.Outport
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Processor:
+     |  
+     |  category
+     |  
+     |  classIdentifier
+     |  
+     |  codeState
+     |  
+     |  displayName
+     |  
+     |  identifier
+     |  
+     |  inports
+     |  
+     |  meta
+     |  
+     |  network
+     |  
+     |  outports
+     |  
+     |  tags
+     |  
+     |  widget
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.properties.PropertyOwner, arg0: str) -> inviwo::Property
+     |  
+     |  addProperty(...)
+     |      addProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> None
+     |  
+     |  getInvalidationLevel(...)
+     |      getInvalidationLevel(self: inviwopy.properties.PropertyOwner) -> inviwo::InvalidationLevel
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.properties.PropertyOwner) -> List[str]
+     |  
+     |  getPropertiesRecursive(...)
+     |      getPropertiesRecursive(self: inviwopy.properties.PropertyOwner) -> List[inviwo::Property]
+     |  
+     |  getPropertyByIdentifier(...)
+     |      getPropertyByIdentifier(self: inviwopy.properties.PropertyOwner, identifier: str, recursiveSearch: bool=False) -> inviwo::Property
+     |  
+     |  getPropertyByPath(...)
+     |      getPropertyByPath(self: inviwopy.properties.PropertyOwner, arg0: List[str]) -> inviwo::Property
+     |  
+     |  invalidate(...)
+     |      invalidate(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  removeProperty(...)
+     |      removeProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> inviwo::Property
+     |  
+     |  resetAllPoperties(...)
+     |      resetAllPoperties(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setAllPropertiesCurrentStateAsDefault(...)
+     |      setAllPropertiesCurrentStateAsDefault(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setValid(...)
+     |      setValid(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  size(...)
+     |      size(self: inviwopy.properties.PropertyOwner) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  processor
+     |  
+     |  properties
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Settings(inviwopy.properties.PropertyOwner)
+     |  Method resolution order:
+     |      Settings
+     |      inviwopy.properties.PropertyOwner
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  __getattr__(...)
+     |      __getattr__(self: inviwopy.properties.PropertyOwner, arg0: str) -> inviwo::Property
+     |  
+     |  addProperty(...)
+     |      addProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> None
+     |  
+     |  getInvalidationLevel(...)
+     |      getInvalidationLevel(self: inviwopy.properties.PropertyOwner) -> inviwo::InvalidationLevel
+     |  
+     |  getPath(...)
+     |      getPath(self: inviwopy.properties.PropertyOwner) -> List[str]
+     |  
+     |  getPropertiesRecursive(...)
+     |      getPropertiesRecursive(self: inviwopy.properties.PropertyOwner) -> List[inviwo::Property]
+     |  
+     |  getPropertyByIdentifier(...)
+     |      getPropertyByIdentifier(self: inviwopy.properties.PropertyOwner, identifier: str, recursiveSearch: bool=False) -> inviwo::Property
+     |  
+     |  getPropertyByPath(...)
+     |      getPropertyByPath(self: inviwopy.properties.PropertyOwner, arg0: List[str]) -> inviwo::Property
+     |  
+     |  invalidate(...)
+     |      invalidate(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  removeProperty(...)
+     |      removeProperty(self: inviwopy.properties.PropertyOwner, arg0: inviwo::Property) -> inviwo::Property
+     |  
+     |  resetAllPoperties(...)
+     |      resetAllPoperties(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setAllPropertiesCurrentStateAsDefault(...)
+     |      setAllPropertiesCurrentStateAsDefault(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  setValid(...)
+     |      setValid(self: inviwopy.properties.PropertyOwner) -> None
+     |  
+     |  size(...)
+     |      size(self: inviwopy.properties.PropertyOwner) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from inviwopy.properties.PropertyOwner:
+     |  
+     |  processor
+     |  
+     |  properties
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size2tFlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Size2tFlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size2tFlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size2tFlatMultiInport) -> inviwopy.glm.size2_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size2tFlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size2_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size2tFlatMultiInport) -> List[inviwopy.glm.size2_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size2tFlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size2tInport(Inport)
+     |  Method resolution order:
+     |      Size2tInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size2tInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size2tInport) -> inviwopy.glm.size2_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size2tInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size2_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size2tInport) -> List[inviwopy.glm.size2_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size2tInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size2tMultiInport(Inport)
+     |  Method resolution order:
+     |      Size2tMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size2tMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size2tMultiInport) -> inviwopy.glm.size2_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size2tMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size2_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size2tMultiInport) -> List[inviwopy.glm.size2_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size2tMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size2tOutport(Outport)
+     |  Method resolution order:
+     |      Size2tOutport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size2tOutport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Size2tOutport) -> inviwopy.glm.size2_tVector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size2tOutport) -> inviwopy.glm.size2_tVector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size2tOutport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Size2tOutport, arg0: inviwopy.glm.size2_tVector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size3tFlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Size3tFlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size3tFlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size3tFlatMultiInport) -> inviwopy.glm.size3_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size3tFlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size3_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size3tFlatMultiInport) -> List[inviwopy.glm.size3_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size3tFlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size3tInport(Inport)
+     |  Method resolution order:
+     |      Size3tInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size3tInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size3tInport) -> inviwopy.glm.size3_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size3tInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size3_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size3tInport) -> List[inviwopy.glm.size3_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size3tInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size3tMultiInport(Inport)
+     |  Method resolution order:
+     |      Size3tMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size3tMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size3tMultiInport) -> inviwopy.glm.size3_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size3tMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size3_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size3tMultiInport) -> List[inviwopy.glm.size3_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size3tMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size3tOutport(Outport)
+     |  Method resolution order:
+     |      Size3tOutport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size3tOutport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Size3tOutport) -> inviwopy.glm.size3_tVector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size3tOutport) -> inviwopy.glm.size3_tVector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size3tOutport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Size3tOutport, arg0: inviwopy.glm.size3_tVector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size4tFlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Size4tFlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size4tFlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size4tFlatMultiInport) -> inviwopy.glm.size4_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size4tFlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size4_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size4tFlatMultiInport) -> List[inviwopy.glm.size4_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size4tFlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size4tInport(Inport)
+     |  Method resolution order:
+     |      Size4tInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size4tInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size4tInport) -> inviwopy.glm.size4_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size4tInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size4_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size4tInport) -> List[inviwopy.glm.size4_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size4tInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size4tMultiInport(Inport)
+     |  Method resolution order:
+     |      Size4tMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size4tMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size4tMultiInport) -> inviwopy.glm.size4_tVector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Size4tMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.size4_tVector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Size4tMultiInport) -> List[inviwopy.glm.size4_tVector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size4tMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Size4tOutport(Outport)
+     |  Method resolution order:
+     |      Size4tOutport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Size4tOutport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Size4tOutport) -> inviwopy.glm.size4_tVector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Size4tOutport) -> inviwopy.glm.size4_tVector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Size4tOutport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Size4tOutport, arg0: inviwopy.glm.size4_tVector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Tag(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Tag
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. __init__(self: inviwopy.Tag) -> None
+     |      
+     |      2. __init__(self: inviwopy.Tag, arg0: str) -> None
+     |      
+     |      3. __init__(self: inviwopy.Tag, arg0: inviwopy.Tag) -> None
+     |  
+     |  getString(...)
+     |      getString(self: inviwopy.Tag) -> str
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Tags(pybind11_builtins.pybind11_object)
+     |  Method resolution order:
+     |      Tags
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __eq__(...)
+     |      __eq__(self: inviwopy.Tags, arg0: inviwopy.Tags) -> bool
+     |  
+     |  __init__(...)
+     |      __init__(*args, **kwargs)
+     |      Overloaded function.
+     |      
+     |      1. __init__(self: inviwopy.Tags) -> None
+     |      
+     |      2. __init__(self: inviwopy.Tags, arg0: str) -> None
+     |      
+     |      3. __init__(self: inviwopy.Tags, arg0: inviwopy.Tags) -> None
+     |  
+     |  __lt__(...)
+     |      __lt__(self: inviwopy.Tags, arg0: inviwopy.Tags) -> bool
+     |  
+     |  addTag(...)
+     |      addTag(self: inviwopy.Tags, arg0: inviwopy.Tag) -> None
+     |  
+     |  addTags(...)
+     |      addTags(self: inviwopy.Tags, arg0: inviwopy.Tags) -> None
+     |  
+     |  empty(...)
+     |      empty(self: inviwopy.Tags) -> bool
+     |  
+     |  getMatches(...)
+     |      getMatches(self: inviwopy.Tags, arg0: inviwopy.Tags) -> int
+     |  
+     |  getString(...)
+     |      getString(self: inviwopy.Tags) -> str
+     |  
+     |  size(...)
+     |      size(self: inviwopy.Tags) -> int
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  tags
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec2FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Vec2FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec2FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec2FlatMultiInport) -> inviwopy.glm.vec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec2FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec2FlatMultiInport) -> List[inviwopy.glm.vec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec2FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec2Inport(Inport)
+     |  Method resolution order:
+     |      Vec2Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec2Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec2Inport) -> inviwopy.glm.vec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec2Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec2Inport) -> List[inviwopy.glm.vec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec2Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec2MultiInport(Inport)
+     |  Method resolution order:
+     |      Vec2MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec2MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec2MultiInport) -> inviwopy.glm.vec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec2MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec2MultiInport) -> List[inviwopy.glm.vec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec2MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec2Outport(Outport)
+     |  Method resolution order:
+     |      Vec2Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec2Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Vec2Outport) -> inviwopy.glm.vec2Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec2Outport) -> inviwopy.glm.vec2Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec2Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Vec2Outport, arg0: inviwopy.glm.vec2Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec3FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Vec3FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec3FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec3FlatMultiInport) -> inviwopy.glm.vec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec3FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec3FlatMultiInport) -> List[inviwopy.glm.vec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec3FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec3Inport(Inport)
+     |  Method resolution order:
+     |      Vec3Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec3Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec3Inport) -> inviwopy.glm.vec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec3Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec3Inport) -> List[inviwopy.glm.vec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec3Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec3MultiInport(Inport)
+     |  Method resolution order:
+     |      Vec3MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec3MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec3MultiInport) -> inviwopy.glm.vec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec3MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec3MultiInport) -> List[inviwopy.glm.vec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec3MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec3Outport(Outport)
+     |  Method resolution order:
+     |      Vec3Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec3Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Vec3Outport) -> inviwopy.glm.vec3Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec3Outport) -> inviwopy.glm.vec3Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec3Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Vec3Outport, arg0: inviwopy.glm.vec3Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec4FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      Vec4FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec4FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec4FlatMultiInport) -> inviwopy.glm.vec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec4FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec4FlatMultiInport) -> List[inviwopy.glm.vec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec4FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec4Inport(Inport)
+     |  Method resolution order:
+     |      Vec4Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec4Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec4Inport) -> inviwopy.glm.vec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec4Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec4Inport) -> List[inviwopy.glm.vec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec4Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec4MultiInport(Inport)
+     |  Method resolution order:
+     |      Vec4MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec4MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec4MultiInport) -> inviwopy.glm.vec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.Vec4MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.vec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.Vec4MultiInport) -> List[inviwopy.glm.vec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec4MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class Vec4Outport(Outport)
+     |  Method resolution order:
+     |      Vec4Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.Vec4Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.Vec4Outport) -> inviwopy.glm.vec4Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.Vec4Outport) -> inviwopy.glm.vec4Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.Vec4Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.Vec4Outport, arg0: inviwopy.glm.vec4Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec2FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      dVec2FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec2FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec2FlatMultiInport) -> inviwopy.glm.dvec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec2FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec2FlatMultiInport) -> List[inviwopy.glm.dvec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec2FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec2Inport(Inport)
+     |  Method resolution order:
+     |      dVec2Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec2Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec2Inport) -> inviwopy.glm.dvec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec2Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec2Inport) -> List[inviwopy.glm.dvec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec2Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec2MultiInport(Inport)
+     |  Method resolution order:
+     |      dVec2MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec2MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec2MultiInport) -> inviwopy.glm.dvec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec2MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec2MultiInport) -> List[inviwopy.glm.dvec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec2MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec2Outport(Outport)
+     |  Method resolution order:
+     |      dVec2Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec2Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.dVec2Outport) -> inviwopy.glm.dvec2Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec2Outport) -> inviwopy.glm.dvec2Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec2Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.dVec2Outport, arg0: inviwopy.glm.dvec2Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec3FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      dVec3FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec3FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec3FlatMultiInport) -> inviwopy.glm.dvec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec3FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec3FlatMultiInport) -> List[inviwopy.glm.dvec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec3FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec3Inport(Inport)
+     |  Method resolution order:
+     |      dVec3Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec3Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec3Inport) -> inviwopy.glm.dvec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec3Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec3Inport) -> List[inviwopy.glm.dvec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec3Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec3MultiInport(Inport)
+     |  Method resolution order:
+     |      dVec3MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec3MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec3MultiInport) -> inviwopy.glm.dvec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec3MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec3MultiInport) -> List[inviwopy.glm.dvec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec3MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec3Outport(Outport)
+     |  Method resolution order:
+     |      dVec3Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec3Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.dVec3Outport) -> inviwopy.glm.dvec3Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec3Outport) -> inviwopy.glm.dvec3Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec3Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.dVec3Outport, arg0: inviwopy.glm.dvec3Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec4FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      dVec4FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec4FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec4FlatMultiInport) -> inviwopy.glm.dvec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec4FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec4FlatMultiInport) -> List[inviwopy.glm.dvec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec4FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec4Inport(Inport)
+     |  Method resolution order:
+     |      dVec4Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec4Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec4Inport) -> inviwopy.glm.dvec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec4Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec4Inport) -> List[inviwopy.glm.dvec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec4Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec4MultiInport(Inport)
+     |  Method resolution order:
+     |      dVec4MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec4MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec4MultiInport) -> inviwopy.glm.dvec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.dVec4MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.dvec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.dVec4MultiInport) -> List[inviwopy.glm.dvec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec4MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class dVec4Outport(Outport)
+     |  Method resolution order:
+     |      dVec4Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.dVec4Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.dVec4Outport) -> inviwopy.glm.dvec4Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.dVec4Outport) -> inviwopy.glm.dvec4Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.dVec4Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.dVec4Outport, arg0: inviwopy.glm.dvec4Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec2FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      iVec2FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec2FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec2FlatMultiInport) -> inviwopy.glm.ivec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec2FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec2FlatMultiInport) -> List[inviwopy.glm.ivec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec2FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec2Inport(Inport)
+     |  Method resolution order:
+     |      iVec2Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec2Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec2Inport) -> inviwopy.glm.ivec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec2Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec2Inport) -> List[inviwopy.glm.ivec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec2Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec2MultiInport(Inport)
+     |  Method resolution order:
+     |      iVec2MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec2MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec2MultiInport) -> inviwopy.glm.ivec2Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec2MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec2Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec2MultiInport) -> List[inviwopy.glm.ivec2Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec2MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec2Outport(Outport)
+     |  Method resolution order:
+     |      iVec2Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec2Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.iVec2Outport) -> inviwopy.glm.ivec2Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec2Outport) -> inviwopy.glm.ivec2Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec2Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.iVec2Outport, arg0: inviwopy.glm.ivec2Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec3FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      iVec3FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec3FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec3FlatMultiInport) -> inviwopy.glm.ivec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec3FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec3FlatMultiInport) -> List[inviwopy.glm.ivec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec3FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec3Inport(Inport)
+     |  Method resolution order:
+     |      iVec3Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec3Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec3Inport) -> inviwopy.glm.ivec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec3Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec3Inport) -> List[inviwopy.glm.ivec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec3Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec3MultiInport(Inport)
+     |  Method resolution order:
+     |      iVec3MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec3MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec3MultiInport) -> inviwopy.glm.ivec3Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec3MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec3Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec3MultiInport) -> List[inviwopy.glm.ivec3Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec3MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec3Outport(Outport)
+     |  Method resolution order:
+     |      iVec3Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec3Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.iVec3Outport) -> inviwopy.glm.ivec3Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec3Outport) -> inviwopy.glm.ivec3Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec3Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.iVec3Outport, arg0: inviwopy.glm.ivec3Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec4FlatMultiInport(Inport)
+     |  Method resolution order:
+     |      iVec4FlatMultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec4FlatMultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec4FlatMultiInport) -> inviwopy.glm.ivec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec4FlatMultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec4FlatMultiInport) -> List[inviwopy.glm.ivec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec4FlatMultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec4Inport(Inport)
+     |  Method resolution order:
+     |      iVec4Inport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec4Inport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec4Inport) -> inviwopy.glm.ivec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec4Inport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec4Inport) -> List[inviwopy.glm.ivec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec4Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec4MultiInport(Inport)
+     |  Method resolution order:
+     |      iVec4MultiInport
+     |      Inport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec4MultiInport, arg0: str) -> None
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec4MultiInport) -> inviwopy.glm.ivec4Vector
+     |  
+     |  getSourceVectorData(...)
+     |      getSourceVectorData(self: inviwopy.iVec4MultiInport) -> List[Tuple[inviwopy.Outport, inviwopy.glm.ivec4Vector]]
+     |  
+     |  getVectorData(...)
+     |      getVectorData(self: inviwopy.iVec4MultiInport) -> List[inviwopy.glm.ivec4Vector]
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec4MultiInport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Inport:
+     |  
+     |  canConnectTo(...)
+     |      canConnectTo(self: inviwopy.Inport, arg0: inviwopy.Port) -> bool
+     |  
+     |  connectTo(...)
+     |      connectTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  disconnectFrom(...)
+     |      disconnectFrom(self: inviwopy.Inport, arg0: inviwo::Outport) -> None
+     |  
+     |  getChangedOutports(...)
+     |      getChangedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getConnectedOutport(...)
+     |      getConnectedOutport(self: inviwopy.Inport) -> inviwo::Outport
+     |  
+     |  getConnectedOutports(...)
+     |      getConnectedOutports(self: inviwopy.Inport) -> List[inviwo::Outport]
+     |  
+     |  getMaxNumberOfConnections(...)
+     |      getMaxNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  getNumberOfConnections(...)
+     |      getNumberOfConnections(self: inviwopy.Inport) -> int
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Inport, arg0: inviwo::Outport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Inport:
+     |  
+     |  optional
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+    
+    class iVec4Outport(Outport)
+     |  Method resolution order:
+     |      iVec4Outport
+     |      Outport
+     |      Port
+     |      pybind11_builtins.pybind11_object
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(...)
+     |      __init__(self: inviwopy.iVec4Outport, arg0: str) -> None
+     |  
+     |  detatchData(...)
+     |      detatchData(self: inviwopy.iVec4Outport) -> inviwopy.glm.ivec4Vector
+     |  
+     |  getData(...)
+     |      getData(self: inviwopy.iVec4Outport) -> inviwopy.glm.ivec4Vector
+     |  
+     |  hasData(...)
+     |      hasData(self: inviwopy.iVec4Outport) -> bool
+     |  
+     |  setData(...)
+     |      setData(self: inviwopy.iVec4Outport, arg0: inviwopy.glm.ivec4Vector) -> None
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Outport:
+     |  
+     |  getConnectedInports(...)
+     |      getConnectedInports(self: inviwopy.Outport) -> List[inviwopy.Inport]
+     |  
+     |  isConnectedTo(...)
+     |      isConnectedTo(self: inviwopy.Outport, arg0: inviwopy.Inport) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from Port:
+     |  
+     |  isConnected(...)
+     |      isConnected(self: inviwopy.Port) -> bool
+     |  
+     |  isReady(...)
+     |      isReady(self: inviwopy.Port) -> bool
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from Port:
+     |  
+     |  classIdentifier
+     |  
+     |  contentInfo
+     |  
+     |  identifier
+     |  
+     |  processor
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from pybind11_builtins.pybind11_object:
+     |  
+     |  __new__(*args, **kwargs) from pybind11_builtins.pybind11_type
+     |      Create and return a new object.  See help(type) for accurate signature.
+
+FUNCTIONS
+    debugBreak(...) method of builtins.PyCapsule instance
+        debugBreak() -> None
+    
+    logError(...) method of builtins.PyCapsule instance
+        logError(arg0: str) -> None
+    
+    logInfo(...) method of builtins.PyCapsule instance
+        logInfo(arg0: str) -> None
+    
+    logWarn(...) method of builtins.PyCapsule instance
+        logWarn(arg0: str) -> None
+
+DATA
+    app = <inviwopy.InviwoApplication object>
+
+FILE
+    /home/sean/inviwo_build/bin/inviwopy.cpython-35m-x86_64-linux-gnu.so
+
+
+Help on module inviwopy.qt in inviwopy:
+
+NAME
+    inviwopy.qt - Qt dependent stuff
+
+FUNCTIONS
+    prompt(...) method of builtins.PyCapsule instance
+        prompt(title: str, message: str, defaultResponse: str='') -> object
+    
+    update(...) method of builtins.PyCapsule instance
+        update() -> None
+
+FILE
+    (built-in)
+
