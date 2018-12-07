@@ -1,6 +1,7 @@
 import inviwopy
 import ivw.utils as inviwo_utils
 from inviwopy.glm import ivec2
+
 import os
 
 def main(save_dir, image_name, pixel_dim, tf_location):
@@ -8,6 +9,7 @@ def main(save_dir, image_name, pixel_dim, tf_location):
         os.makedirs(save_dir)
     save_loc = os.path.join(save_dir, image_name)
 
+    inviwopy.app.waitForPool()
     network = inviwopy.app.network
     canvases = network.canvases
     for canvas in canvases:
@@ -20,6 +22,7 @@ def main(save_dir, image_name, pixel_dim, tf_location):
     inviwo_utils.update()
 
     canvas.snapshot(save_loc)
+    inviwopy.app.closeInviwoApplication()
     return 0
 
 if __name__ == "__main__":
