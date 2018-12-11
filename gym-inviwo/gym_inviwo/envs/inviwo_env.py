@@ -3,75 +3,83 @@ import subprocess
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
-import numpy
+import numpy as np 
 
-class InviwoParams():
-    def __init__(self, num_steps,
-        workspace_file, python_script, inviwo_exe_location):
-        self.workspace_file = workspace_file
-        self.python_script = python_script
-        self.inviwo_exe_location = inviwo_exe_location
-        self.time_step = 0
-        self.num_steps = num_steps
+import inviwopy
+import ivw.utils as inviwo_utils
+from inviwopy.glm import ivec2, vec4
+
+import SaveTF
 
 class InviwoEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
     def __init__(self, input_image_width=128, 
-                 input_image_height=128, channels=3,
-                 ivw_params):
+                 input_image_height=128, channels=3):
         
         # The input image and the transfer function
         self.observation_space = spaces.Dict({
             'input_image': spaces.Box(
                 low=0, high=255, dtype=np.uint8, 
-                shape=(input_image_height, 
-                       input_image_width, 
-                       channels)),
+                shape=(input_image_width,
+                    input_image_height, 
+                    channels)),
             'rgba_tf': spaces.Box(
                 low=0, high=255, dtype=np.unit8, shape=(256, 4))
         })
+        self.action_space = spaces.Box(
+            low=0, high=255, dtype=np.unit8, shape=(256, 4))
+        
+        # Inviwo init
+        network = inviwopy.app.network
+        canvases = network.canvases
+        for canvas in canvases:
+            canvas.inputSize.dimensions.value = ivec2(
+                input_image_width, input_image_height)
+        self.ivw_tf = network.VolumeRaycaster.isotfComposite.transferFunction
+        self.input_data = self.render_inviwo_frame()
 
-        # tf can change each position by increasing, decreasing or no-op
-        tf_change_actions = np.full(shape=(256*4,), fill_value=3)
-        self.action_space = spaces.MultiDiscrete(tf_change_actions)
-        self.ivw_params = ivw_params
+        self.reset()
 
     def step(self, action):
         self.take_action(action)
         self.time_step += 1
 
         # Perform inviwo rendering
-        self.render_inviwo_frame()
+        self.im_data = self.render_inviwo_frame()
         reward = self.get_reward()
-        ob = self.get_state()
         reset = (self.num_steps is self.time_step)
 
         # Dict of debug information
         info = {}
 
+        ob = (self.im_data, action)
         return ob, reward, reset, info
 
-    def get_state(self):
-        pass
-
-
     def get_reward(self):
-        pass
+        return np.sum((self.im_data-fn)**2)
 
-    # Likely to run into speed issues with this.
-    # Maybe should run tf from inviwo similar to old project?
-    # Will likely be awkward though.
+    # Render a frame from Inviwo
     def render_inviwo_frame(self):
-        subprocess.run("~/inviwo_build_minimalqt/bin/inviwo -n -w ~/inviwo/data/workspaces/boron.inv -p ~/TransferFunctionLearning/Inviwo/InviwoSingleFrameRender.py",
-        shell=True, timeout=10)
+        inviwo_utils.update()
+        network = inviwopy.app.network
+        outport = network.VolumeRaycaster.getOutport("outport")
+        return outport.getData()
 
+    # Use the action to set the transfer function in Inviwo
+    # Either by saving an XML or directly in Inviwo
     def take_action(self, action):
-        
+        self.ivw_tf.clear()
+        for i, val in enumerate(action):
+            vector = vec4(*val)
+            self.ivw_tf.add(float(i) / len(action), vector)
+
     # Set the transfer function back to the default value
     def reset(self):
         self.time_step = 0
+        self.ivw_tf.clear()
 
     # If inside Inviwo should not be needed otherwise,
     # show the png image from inviwo
     def render(self, mode='human', close=False):
+        pass
