@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import collections
 
 import gym
 from gym import error, spaces, utils
@@ -9,6 +10,7 @@ import numpy as np
 import inviwopy
 import ivw.utils as inviwo_utils
 from inviwopy.glm import ivec2, vec4
+from inviwopy.data import TFPrimitiveData
 
 import SaveTF
 
@@ -16,20 +18,33 @@ class InviwoEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
     def __init__(self, input_image_width=128, 
-                 input_image_height=128, channels=3):
+                 input_image_height=128, channels=3,
+                 num_steps=1000):
         
         # The input image and the transfer function
-        self.observation_space = spaces.Dict({
-            'input_image': spaces.Box(
-                low=0, high=255, dtype=np.uint8, 
-                shape=(input_image_width,
-                    input_image_height, 
-                    channels)),
-            'rgba_tf': spaces.Box(
-                low=0, high=255, dtype=np.uint8, shape=(256, 4))
-        })
+        """ More complex
+        self.observation_space = spaces.Dict(
+            collections.OrderedDict((
+                ("Image", spaces.Box(
+                    low=0, high=255, dtype=np.uint8, 
+                    shape=(input_image_width,
+                        input_image_height, 
+                        channels)
+                )),
+                ("TF", spaces.Box(
+                    low=0, high=255, dtype=np.uint8, shape=(256, 4)
+                ))
+            ))
+        )
+        """
+        self.observation_space = spaces.Box(
+                    low=0, high=255, dtype=np.uint8, 
+                    shape=(input_image_width,
+                        input_image_height, 
+                        channels))
         self.action_space = spaces.Box(
-            low=0, high=255, dtype=np.uint8, shape=(256, 4))
+            low=0, high=255, dtype=np.uint8, shape=(256 *4,))
+        self.num_steps=1000
         
         # Inviwo init
         network = inviwopy.app.network
@@ -54,36 +69,51 @@ class InviwoEnv(gym.Env):
         # Dict of debug information
         info = {}
 
-        ob = (self.im_data, action)
+        """
+        ob = collections.OrderedDict((
+            ("Image", self.im_data), 
+            ("TF", action)))
+        """
+        ob = self.im_data
         return ob, reward, reset, info
 
     def get_reward(self):
-        return np.sum((self.im_data-self.input_data)**2)
+        return -np.sum((self.im_data-self.input_data)**2)
 
     # Render a frame from Inviwo
     def render_inviwo_frame(self):
         inviwo_utils.update()
         network = inviwopy.app.network
         outport = network.VolumeRaycaster.getOutport("outport")
-        return outport.getData()
+        return outport.getData().colorLayers[0].data[:, :, :3]
 
     # Use the action to set the transfer function in Inviwo
     # Either by saving an XML or directly in Inviwo
     def take_action(self, action):
         self.ivw_tf.clear()
-        for i, val in enumerate(action):
-            vector = vec4(*val)
-            self.ivw_tf.add(float(i) / len(action), vector)
+        data_list = []
+        # If properly using, this needs to be a list
+        for i in range(255):
+            start_idx = 4*i
+            vec_list = action[start_idx:start_idx+4].copy().astype(np.float32) / float(255)
+            vector = vec4(*vec_list)
+            data_list.append(TFPrimitiveData(float(i) / 255, vector))
+        self.ivw_tf.add(data_list)
 
     # Set the transfer function back to the default value and moves the camera
     def reset(self):
         self.time_step = 0
         self.ivw_tf.clear()
-        
-        return (
-            np.zeros(
-                shape=self.input_data.shape, dtype=np.uint8),
-            np.zeros(shape=(256, 4), dtype=np.uint8))
+        out_im = np.zeros(
+                shape=self.input_data.shape, dtype=np.uint8)
+        out_tf = np.zeros(
+                shape=self.input_data.shape, dtype=np.uint8)
+        """
+        return collections.OrderedDict((
+            ("Image", out_im), 
+            ("TF", out_tf)))
+        """
+        return out_im
 
     # If inside Inviwo should not be needed otherwise,
     # show the png image from inviwo
