@@ -1,5 +1,7 @@
 import subprocess
 
+sys.path.insert(0, "/home/sean/py_environments/gym/lib/python3.5/site-packages")
+
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
@@ -25,10 +27,10 @@ class InviwoEnv(gym.Env):
                     input_image_height, 
                     channels)),
             'rgba_tf': spaces.Box(
-                low=0, high=255, dtype=np.unit8, shape=(256, 4))
+                low=0, high=255, dtype=np.uint8, shape=(256, 4))
         })
         self.action_space = spaces.Box(
-            low=0, high=255, dtype=np.unit8, shape=(256, 4))
+            low=0, high=255, dtype=np.uint8, shape=(256, 4))
         
         # Inviwo init
         network = inviwopy.app.network
@@ -57,7 +59,7 @@ class InviwoEnv(gym.Env):
         return ob, reward, reset, info
 
     def get_reward(self):
-        return np.sum((self.im_data-fn)**2)
+        return np.sum((self.im_data-self.input_data)**2)
 
     # Render a frame from Inviwo
     def render_inviwo_frame(self):
