@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 sys.path.insert(0, "/home/sean/py_environments/gym/lib/python3.5/site-packages")
 
