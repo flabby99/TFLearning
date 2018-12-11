@@ -77,10 +77,12 @@ class InviwoEnv(gym.Env):
             vector = vec4(*val)
             self.ivw_tf.add(float(i) / len(action), vector)
 
-    # Set the transfer function back to the default value
+    # Set the transfer function back to the default value and moves the camera
     def reset(self):
         self.time_step = 0
         self.ivw_tf.clear()
+        
+        # TODO set up return
 
     # If inside Inviwo should not be needed otherwise,
     # show the png image from inviwo
