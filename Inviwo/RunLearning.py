@@ -1,7 +1,7 @@
 import sys
 
 sys.path.insert(0, "/home/sean/py_environments/openai_baslines/lib/python3.5/site-packages")
-
+sys.path.insert(0, "/home/sean/gym")
 sys.path.insert(0, 
 "/home/sean/TransferFunctionLearning/Inviwo")
 
