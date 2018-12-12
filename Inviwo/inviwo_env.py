@@ -42,8 +42,12 @@ class InviwoEnv(gym.Env):
                     shape=(input_image_width,
                         input_image_height, 
                         channels))
+        """
         self.action_space = spaces.Box(
             low=0, high=255, dtype=np.uint8, shape=(256 *4,))
+        """
+        nvec = np.full(fill_value=256, shape=(256*4, ))
+        self.action_space = spaces.MultiDiscrete(nvec)
         self.num_steps=1000
         
         # Inviwo init
@@ -67,7 +71,14 @@ class InviwoEnv(gym.Env):
         reset = (self.num_steps is self.time_step)
 
         # Dict of debug information
-        info = {}
+        info = {"action": action,
+                "reward": reward,
+                "time_step": self.time_step}
+
+        if (self.time_step % 10 == 0):
+            print("At time step {}, information is {}".format(
+                self.time_step, info
+            ))
 
         """
         ob = collections.OrderedDict((
@@ -90,14 +101,16 @@ class InviwoEnv(gym.Env):
     # Use the action to set the transfer function in Inviwo
     # Either by saving an XML or directly in Inviwo
     def take_action(self, action):
+        # It would seem the action is not being properly selected
+        action_rounded = np.around(action)
         self.ivw_tf.clear()
         data_list = []
         # If properly using, this needs to be a list
-        for i in range(255):
+        for i in range(256):
             start_idx = 4*i
-            vec_list = action[start_idx:start_idx+4].copy().astype(np.float32) / float(255)
+            vec_list = action_rounded[start_idx:start_idx+4].copy().astype(np.float32) / float(255)
             vector = vec4(*vec_list)
-            data_list.append(TFPrimitiveData(float(i) / 255, vector))
+            data_list.append(TFPrimitiveData((float(i) / 255), vector))
         self.ivw_tf.add(data_list)
 
     # Set the transfer function back to the default value and moves the camera
