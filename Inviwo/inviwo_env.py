@@ -46,7 +46,7 @@ class InviwoEnv(gym.Env):
         self.action_space = spaces.Box(
             low=0, high=255, dtype=np.uint8, shape=(256 *4,))
         """
-        nvec = np.full(fill_value=256, shape=(256*4, ))
+        nvec = np.full(fill_value=256, shape=(256*4))
         self.action_space = spaces.MultiDiscrete(nvec)
         self.num_steps=1000
         
