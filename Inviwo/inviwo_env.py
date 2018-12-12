@@ -37,16 +37,17 @@ class InviwoEnv(gym.Env):
             ))
         )
         """
+        #TODO would need to check ivw image format matches
         self.observation_space = spaces.Box(
                     low=0, high=255, dtype=np.uint8, 
                     shape=(input_image_width,
                         input_image_height, 
                         channels))
-        """
-        self.action_space = spaces.Box(
-            low=0, high=255, dtype=np.uint8, shape=(256 *4,))
-        """
+        #self.action_space = spaces.Box(
+        #    low=0, high=255, dtype=np.uint8, shape=(256 *4,))
         nvec = np.full(fill_value=256, shape=(256*4))
+
+        #Does not work in current version of stable baselines.
         self.action_space = spaces.MultiDiscrete(nvec)
         self.num_steps=1000
         
