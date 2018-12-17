@@ -127,6 +127,7 @@ class InviwoEnv(gym.Env):
         network = inviwopy.app.network
         self.ivw_tf = network.VolumeRaycaster.isotfComposite.transferFunction
         self.input_data = self.render_inviwo_frame()
+        self.ivw_tf.clear()
         return self.input_data.copy()
 
     # If inside Inviwo should not be needed otherwise,
