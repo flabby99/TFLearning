@@ -105,15 +105,17 @@ class InviwoEnv(gym.Env):
     # Either by saving an XML or directly in Inviwo
     def take_action(self, action, is_int=True):
         # It would seem the action is not being properly selected
-        action_rounded = np.around(action)
         self.ivw_tf.clear()
         data_list = []
         # If properly using, this needs to be a list
         for i in range(256):
             start_idx = 4*i
-            vec_list = action_rounded[start_idx:start_idx+4].copy()
             if is_int:
+                action_rounded = np.around(action)
+                vec_list = action_rounded[start_idx:start_idx+4].copy()
                 vec_list = vec_list.astype(np.float32) / float(255)
+            else:
+                vec_list = action[start_idx:start_idx+4].copy()
             vector = vec4(*vec_list)
             data_list.append(TFPrimitiveData((float(i) / 255), vector))
         self.ivw_tf.add(data_list)
