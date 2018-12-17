@@ -58,8 +58,6 @@ class InviwoEnv(gym.Env):
         for canvas in canvases:
             canvas.inputSize.dimensions.value = ivec2(
                 input_image_width, input_image_height)
-        self.ivw_tf = network.VolumeRaycaster.isotfComposite.transferFunction
-        self.input_data = self.render_inviwo_frame()
         self.reset()
 
     def step(self, action):
@@ -123,12 +121,13 @@ class InviwoEnv(gym.Env):
         self.ivw_tf.add(data_list)
 
     # Set the transfer function back to the default value and moves the camera
+    # TODO set a random view position and tf
     def reset(self):
         self.time_step = 0
-        self.ivw_tf.clear()
-        out_im = np.zeros(
-                shape=self.input_data.shape, dtype=np.uint8)
-        return out_im
+        network = inviwopy.app.network
+        self.ivw_tf = network.VolumeRaycaster.isotfComposite.transferFunction
+        self.input_data = self.render_inviwo_frame()
+        return self.input_data
 
     # If inside Inviwo should not be needed otherwise,
     # show the png image from inviwo
