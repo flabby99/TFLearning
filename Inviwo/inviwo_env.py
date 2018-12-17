@@ -12,8 +12,6 @@ import ivw.utils as inviwo_utils
 from inviwopy.glm import ivec2, vec4
 from inviwopy.data import TFPrimitiveData
 
-import SaveTF
-
 class InviwoEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
@@ -127,7 +125,7 @@ class InviwoEnv(gym.Env):
         network = inviwopy.app.network
         self.ivw_tf = network.VolumeRaycaster.isotfComposite.transferFunction
         self.input_data = self.render_inviwo_frame()
-        return self.input_data
+        return self.input_data.copy()
 
     # If inside Inviwo should not be needed otherwise,
     # show the png image from inviwo
